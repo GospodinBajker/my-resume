@@ -1,0 +1,394 @@
+<!--Hour 9. After short break I decide too add bar that shows my skills and my level of knowledge
+and also to fulfil that emptiness in the middle of my bottom page I add few interests. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dino Talic</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100vw;
+        max-height: auto;
+      }
+      body {
+        background: linear-gradient(49deg, rgb(135, 131, 202) 0%, rgba(46,154,151,1) 35%, rgba(0,212,255,1) 100%);
+        min-height: 100vh;
+      }
+      #heading {
+        background: linear-gradient(220deg, rgb(135, 131, 202) 0%, rgba(46,154,151,1) 35%, rgba(0,212,255,1) 100%);
+      }
+      #heading h1 {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 100px;
+        color: rgb(237, 244, 250);
+        margin-right: 10px;
+        animation: animate1 3s ease infinite;
+       
+      }
+      @keyframes animate1 {
+        0%,100% {
+          opacity: 100%;
+        }
+        50% {
+          opacity: 50%;
+        }
+
+      }
+     
+      #heading p {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 50px;
+        color: rgb(237, 244, 250);
+        border-bottom: 1px solid black;
+        margin-right: 15px;
+        animation: animate2 3s ease infinite;
+        
+      }
+      @keyframes animate2 {
+        0%,100% {
+          opacity: 100%;
+        }
+        50% {
+          opacity: 50%;
+        }
+
+      }
+      #details {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(179, 232, 248);
+        border-bottom: 1px solid black;
+      }
+      #details h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #details p {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #details a {
+        font-size: 1.5vw;
+        text-decoration: none;
+        
+      }
+      #img {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        float: right;
+        height: 400px;
+        }
+      #about {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 5px;
+        border-bottom: 1px solid black;
+      }
+      #about h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      #about p {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #exp {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid black;
+      }
+      #exp h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(203, 204, 204);
+        border-style: solid;
+        box-shadow: 10px 10px rgba(90, 88, 88, 0.808);
+      }
+      #exp p {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+      }
+      #exp li {
+        font-size: 30px;
+        background-color: rgb(203, 204, 204);
+      }
+      #education {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid black;
+        margin-top: 10px;
+      }
+      #education h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(203, 204, 204);
+        border-style: solid;
+        box-shadow: 10px 10px rgba(90, 88, 88, 0.808);
+      }
+      #education p {
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 5px;
+      }
+      #education li {
+        font-size: 30px;
+        background-color: rgb(203, 204, 204);
+      }
+      #bottom_page {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-left: auto;
+        margin-top: 10px;
+      }
+      #skills h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(203, 204, 204);
+        border-style: solid;
+        box-shadow: 10px 10px rgba(90, 88, 88, 0.808);
+        padding: 5px;
+      }
+      #skills ul li {
+        font-size: 30px;
+        margin-top: 15px;
+        font-style: italic;
+        line-height: 1em;
+        
+        }
+      #interest {
+        margin-left: 100px;
+      }
+      #interest h2 {
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(203, 204, 204);
+        border-style: solid;
+        box-shadow: 10px 10px rgba(90, 88, 88, 0.808);
+        padding: 5px;
+      }
+      #interest ul li {
+        font-size: 30px;
+        margin-top: 15px;
+        font-style: italic;
+        line-height: 1em;
+
+      }
+      .typeMe {
+        margin-left: 100px;
+        width: 10%;
+        padding: 5px;
+        font-size: 30px;
+      }
+      button {
+        width: 50%;
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .bar {
+        background-color: rgb(179, 232, 248);
+        display: block;
+        height: 20px;
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.24);
+      }
+      .bar span {
+        height: 20px;
+        float: left;
+        background: linear-gradient(135deg, rgba(70, 26, 172, 0.767)0%, rgb(241, 68, 68)100%);
+      }
+      .administration {
+        width: 90%;
+      }
+      .engineering {
+        width: 90%;
+      }
+      .leadership {
+        width: 100%;
+      }
+      .html {
+        width: 100%;
+      }
+      .css {
+        width: 80%;
+      }
+      .js {
+        width: 40%;
+      }
+      .c {
+        width: 50%;
+      }
+      .cpp {
+        width: 50%;
+      }
+      .python {
+        width: 70%;
+      }
+      .java {
+        width: 30%;
+      }
+      .ps {
+        width: 70%;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="heading">
+      <h1 data-text="Dino Talić">Dino Talić</h1>
+      <p><em>Safety Engineer</em></p>
+    </div>
+
+    <div id="details">
+      <h2>Contact:</h2>
+      <p><strong>Address:</strong> Braće Zaimovića bb</p>
+      <p><strong>Email:</strong> dinotalic22@gmail.com</p>
+      <p><strong>Phone:</strong> +387 61/879-049</p>
+      <a href="https://www.facebook.com/tala93.kw/" target="_blank">Facebook</a>
+      <a href="https://ba.linkedin.com/in/dino-talic-70471b1a4" target="_blank">LinkedIn</a>
+    </div>
+    <div id="img">
+      <img
+        src="images/87662b7d-d87a-4431-948f-a606e3ff3653.jpg"
+        alt="profile picture of dino talic"
+      />
+    </div>
+    <div id="about">
+      <h2>About Me</h2>
+      <p>
+        As a kid I just knew I was born for great things and to be successful.
+        In high school while practicing swimming I was the fastest swimmer of my
+        age. But being someone who cares about the lives and health of others
+        was my passion, so I choose to be called a Safety engineer. I studied
+        safety studies at university of Tuzla and got a degree “Bachelor of
+        Science in Safety Engineering”. I started my business career as a
+        volunteer in FEN d.o.o and after two months they give me a job as a
+        Safety engineer. One year later I changed my role to Administrative
+        assistant because my company needed one and after year and two months
+        again I changed my role to Safety engineer. Also I am interested in
+        programming and I really enjoy in coding. For the last year I have been
+        working intensively on programming in C++ and Python. Also last summer I
+        was participant in Tuzla Summer Institute on program “JavaScript for
+        begginers” organized by BILD IT. Right now I’m working on my German
+        language, HTML/CSS/JavaScript and Photoshop skills because my company
+        needed someone to take pictures of our beds and edit them for our web
+        shop. I'm always open for new challenges and ready to learn new things.
+      </p>
+    </div>
+
+    <div id="exp">
+      <h2>EXPERIENCE</h2>
+      <ul>
+        <li><b> FEN d.o.o</b></li>
+        <p>Mar. 2021 - Present, Safety Engineer</p>
+        <li><b>FEN d.o.o</b></li>
+        <p>Feb. 2020 - Mar 2021, Administrative Assistant</p>
+      </ul>
+    </div>
+    <div id="education">
+      <h2>EDUCATION</h2>
+      <ul>
+        <li><b>University of Tuzla</b></li>
+        <p>Bachelor of Science in Safety Engineering, 2012 - 2017</p>
+        <li><b>JUMS EMŠ Lukavac</b></li>
+        <p>Road traffic technician, 2008 - 2012</p>
+      </ul>
+    </div>
+    <div id="bottom_page">
+      <div id="skills">
+        <h2>SKILLS AND ENDORSEMENTS</h2>
+        <ul>
+          <li>Administration</li>
+          <span class="bar"><span class="administration"></span></span>
+          <li>Engineering</li>
+          <span class="bar"><span class="engineering"></span></span>
+          <li>Team Leadership</li>
+          <span class="bar"><span class="leadership"></span></span>
+          <li>HTML</li>
+          <span class="bar"><span class="html"></span></span>
+          <li>CSS</li>
+          <span class="bar"><span class="css"></span></span>
+          <li>JavaScript</li>
+          <span class="bar"><span class="js"></span></span>
+          <li>C</li>
+          <span class="bar"><span class="c"></span></span>
+          <li>C++</li>
+          <span class="bar"><span class="cpp"></span></span>
+          <li>Python</li>
+          <span class="bar"><span class="python"></span></span>
+          <li>Java</li>
+          <span class="bar"><span class="java"></span></span>
+          <li>Photoshop</li>
+          <span class="bar"><span class="ps"></span></span>
+        </ul>
+      </div>
+      <div id="interest">
+        <h2>Interest</h2>
+        <ul>
+          <li>Motorcycles</li>
+          <li>Travel</li>
+          <li>Fitness</li>
+          <li>Web Development</li>
+          <li>Teaching</li>
+          <li>Social media</li>
+          <li>Traditional food in different countries</li>
+          <li>Spanish language</li>
+          <li>Technology</li>
+          <li>App Development</li>
+          <li>Video Games</li>
+          <li>Music</li>
+          <li>Camping</li>
+          <li>Investing</li>
+          <li>Cryptocurrency</li>
+
+        </ul>
+      </div>
+      <div class="typeMe">
+        <form action="">
+          <div id="form_group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div id="form_group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" />
+            </div>
+            <div id="form_group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" />
+              </div>
+              <div id="form_group">
+                <label for="massage">Massage</label>
+                <textarea name="massage" id="massage" cols="30" rows="10" placeholder="Type your text here.."></textarea>
+                </div>
+                <button type="submit">Send</button>
+        </div>
+        </form>
+      
+    </div>
+  </body>
+</html>
